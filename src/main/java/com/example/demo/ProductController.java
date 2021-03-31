@@ -16,7 +16,7 @@ public class ProductController {
         return Arrays.asList(
                 new Product(
                         "jens",
-                        "macbook Retina 13.3' ME662 (2013)",
+                        "jens Retina 13.3' ME662 (2013)",
                         "https://macbookpics.s3.eu-de.cloud-object-storage.appdomain.cloud/img1.jpeg",
                         5,
                         2399
