@@ -3,6 +3,7 @@ package com.example.demo;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,8 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ProductController {
 
+    @Autowired
+    private ProductRepository productRepository;
+
     @RequestMapping("/products")
     public List<Product> getAllProducts() {
+        return productRepository.findAll();
+        /*
         return Arrays.asList(
                 new Product(
                         "jens",
@@ -36,5 +42,6 @@ public class ProductController {
                         1800
                 )
         );
+        */
     }
 }

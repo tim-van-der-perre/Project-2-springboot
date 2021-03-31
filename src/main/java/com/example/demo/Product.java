@@ -1,9 +1,13 @@
 package com.example.demo;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.ArrayList;
 
+@Entity
 public class Product {
 
+    @Id
     private String title;
     private String description;
     private String thumbnail_url;
