@@ -1,8 +1,9 @@
 package com.example.demo;
 
+import java.util.ArrayList;
+
 public class Product {
 
-    private String id;
     private String title;
     private String description;
     private String thumbnail_url;
@@ -13,22 +14,13 @@ public class Product {
 
     }
 
-    public Product(String id, String title, String description, String thumbnail_url, int quantity, float price) {
+    public Product(String title, String description, String thumbnail_url, int quantity, float price) {
         super();
-        this.id = id;
         this.title = title;
         this.description = description;
         this.thumbnail_url = thumbnail_url;
         this.quantity = quantity;
         this.price = price;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getTitle() {
@@ -67,8 +59,7 @@ public class Product {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(float price) {
         this.price = price;
     }
-
 }
