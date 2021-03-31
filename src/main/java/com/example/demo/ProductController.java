@@ -15,27 +15,24 @@ public class ProductController {
     public List<Product> getAllProducts() {
         return Arrays.asList(
                 new Product(
-                        "1",
+                        "jens",
                         "macbook Retina 13.3' ME662 (2013)",
-                        "3.0GHz Dual-core Haswell Intel Core i5 Turbo Boost up to 3.2 GHz, 3MB L3 cache 8GB (two 4GB SO-DIMMs) of 1600MHz DDR3 SDRAM",
                         "https://macbookpics.s3.eu-de.cloud-object-storage.appdomain.cloud/img1.jpeg",
-                        10,
+                        5,
                         2399
                 ),
                 new Product(
-                        "2",
+                        "stijn",
                         "Macbook Pro 13.3' Retina MF841LL/A",
-                        "Macbook Pro 13.3' Retina MF841LL/A Model 2015 Option Ram Care 12/2016",
                         "https://macbookpics.s3.eu-de.cloud-object-storage.appdomain.cloud/img2.jpeg",
-                        15,
+                        3,
                         1199
                 ),
                 new Product(
-                        "3",
+                        "tim",
                         "Macbook Pro 15.4' Retina MC975LL/A Model 2012",
-                        "3.0GHz Dual-core Haswell Intel Core i5 Turbo Boost up to 3.2 GHz, 3MB L3 cache 8GB (two 4GB SO-DIMMs) of 1600MHz DDR3 SDRAM",
                         "https://macbookpics.s3.eu-de.cloud-object-storage.appdomain.cloud/img3.jpeg",
-                        1,
+                        9,
                         1800
                 )
         );
