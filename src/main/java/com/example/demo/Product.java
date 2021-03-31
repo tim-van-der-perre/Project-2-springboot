@@ -15,7 +15,6 @@ public class Product {
     }
 
     public Product(String title, String description, String thumbnail_url, int quantity, float price) {
-        super();
         this.title = title;
         this.description = description;
         this.thumbnail_url = thumbnail_url;
