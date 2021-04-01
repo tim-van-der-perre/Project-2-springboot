@@ -60,4 +60,20 @@ public class ProductController {
             return "Not Authorized to add product";
         }
     }
+
+    @DeleteMapping(value = "/products/delete/{id}")
+    public String deleteProduct(@PathVariable("id") String id, @AuthenticationPrincipal Jwt accessToken) {
+        System.out.println("In DELETE Request");
+        String scope = accessToken.getClaims().get("scope").toString();
+        Boolean partnerRole = scope.contains("partner");
+
+        if (partnerRole) {
+            productRepository.deleteById(id);
+            System.out.println("Contains sequence 'partner': " + accessToken.getClaims().get("scope").toString());
+            System.out.println("Contains sequence 'partner': " + accessToken.getClaims().get("scope").toString().contains("partner"));
+            return "Product deleted";
+        } else {
+            return "Not Authorized to delete product";
+        }
+    }
 }
